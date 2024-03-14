@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a04978e-dc43-4e94-aa8d-d980d2e53dcb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/database/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database/manus_crud.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/book_crud.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routers/authors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routers/books.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Kirjalista.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Kirjalista.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/manus_crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/author_crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,18 +39,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kaisu/Documents/tietojenkasittely/Backend-ohjelmointi/REST&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Kaisuliini/Documents/Tietojenkäsittely/GIT/Backend-ohjelmointi/REST"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kaisuliini\Documents\Tietojenkäsittely\GIT\Kirjalista-backend\app" />
       <recent name="C:\Users\kaisu\Documents\tietojenkasittely\Kirjalista-backend\app\routers" />
       <recent name="C:\Users\kaisu\Documents\tietojenkasittely\Kirjalista-backend" />
       <recent name="C:\Users\kaisu\Documents\tietojenkasittely\Kirjalista-backend\app" />

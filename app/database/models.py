@@ -1,18 +1,18 @@
 from pydantic import BaseModel
 from sqlmodel import SQLModel, Field
 
-class Bookbase(SQLModel):
+class BookBase(SQLModel):
     model:str
     author:str
 
-class BookDB(Bookbase, table=True):
+class BookDB(BookBase, table=True):
     id: int = Field(default=None, primary_key=True)
 
-class BookCreate(Bookbase):
+class BookCreate(BookBase):
     pass
 
-class AuthBase(BaseModel):
+class AuthorBase(BaseModel):
     name:str
 
-class AuthDB(AuthBase):
+class AuthorDB(AuthorBase):
     id:int
