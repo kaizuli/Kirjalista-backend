@@ -2,8 +2,9 @@ from pydantic import BaseModel
 from sqlmodel import SQLModel, Field
 
 class BookBase(SQLModel):
-    model:str
+    name:str
     author:str
+    year: int = None
 
 class BookDB(BookBase, table=True):
     id: int = Field(default=None, primary_key=True)
@@ -11,8 +12,8 @@ class BookDB(BookBase, table=True):
 class BookCreate(BookBase):
     pass
 
-class AuthorBase(BaseModel):
+class AuthorBase(SQLModel):
     name:str
 
-class AuthorDB(AuthorBase):
-    id:int
+class AuthorDB(AuthorBase, table=True):
+    id: int = Field(default=None, primary_key=True)

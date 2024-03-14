@@ -1,5 +1,6 @@
 from fastapi import HTTPException
 from .models import AuthorBase, AuthorDB
+from sqlmodel import Session, select
 
 authors = {
     0: {"id": 0, "name": "Adrzej Sapkowski"},
@@ -7,26 +8,27 @@ authors = {
     2: {"id": 2, "name": "Diana Wynne Jones"}
 }
 
-def fetch_authors():
-    return [authors[a] for a in authors]
+def get_authors(session: Session):
+    return session.exec(session(AuthorDB)).all()
 
-
-def fetch_author(id: int):
-    if id not in authors:
+def get_author(session: Session, id: int):
+    author = session.get(AuthorDB, id)
+    if not author:
         raise HTTPException(status_code=404, detail=f"Author with id {id} not found.")
-    return authors[id]
-
-
-def save_author(author_in: AuthorBase):
-    new_id = max(authors.keys()) +1
-    author = AuthorDB(**author_in.model_dump(), id=new_id)
-    authors[new_id] = author.model_dump()
     return author
 
+def save_author(session: Session, author_in: AuthorBase):
+    author_db = AuthorDB.model_validate(author_in)
+    session.add(author_db)
+    session.commit()
+    session.refresh(author_db)
+    return author_db
 
-def delete_author(id: int):
-    if id not in authors:
+def delete_author(session: Session, id: int):
+    author = session.get(AuthorDB, id)
+    if not author:
         raise HTTPException(status_code=404, detail=f"Author with id {id} not found.")
-    del authors[id]
+    session.delete(author)
+    session.commit()
     return {"message": f"Author with id {id} deleted"}
 
