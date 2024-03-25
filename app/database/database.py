@@ -1,5 +1,4 @@
 from sqlmodel import SQLModel, Session, create_engine
-from models import BookBase, BookDB
 
 books_data = {
     0: {"id": 0, "name": "Sword of Destiny", "author": "Adrzej Sapkowski", "year": 1992},
