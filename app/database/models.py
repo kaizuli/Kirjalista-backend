@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-=======
 from typing import Optional
-
-from pydantic import BaseModel
->>>>>>> 108c29042b28a9424dd5b4ee2e02ee40e38ccc47
 from sqlmodel import SQLModel, Field
 
 class BookBase(SQLModel):
