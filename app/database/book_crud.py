@@ -20,7 +20,7 @@ def create_book(session: Session, book_in: BookCreate):
     return bookdb
 
 def delete_book(session: Session, id: int):
-    book = session.get(BookDB, int)
+    book = session.get(BookDB, id)
     if not book:
         raise HTTPException(status_code=404, detail=f"Book with id {id} not found.")
     session.delete(book)

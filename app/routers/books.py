@@ -8,7 +8,7 @@ router = APIRouter(prefix="/books")
 
 @router.get("/", response_model=list[BookDB])
 def get_books(*, session: Session = Depends(get_session), author: str = ""):
-    books = book_crud.get_books(session, author)
+    books = book_crud.get_books(session)
     return books
 
 @router.get("/{id}", response_model=BookDB)
