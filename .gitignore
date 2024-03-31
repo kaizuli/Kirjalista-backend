@@ -1,5 +1,8 @@
 .idea/
+<<<<<<< HEAD
 __pycache__/
 app/__pycache__/
 app/database/__pycache__/
 app/router/__pycache__/
+=======
+>>>>>>> 108c29042b28a9424dd5b4ee2e02ee40e38ccc47
